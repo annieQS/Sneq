@@ -6,6 +6,7 @@ import {Icon} from 'react-native-elements';
 import Home from './Home/Home';
 import More from './More/More';
 import History from './History/History';
+import Notifications from './Notifications/Notifications';
 
 
 export const HomeStack = StackNavigator({
@@ -18,7 +19,15 @@ export const HomeStack = StackNavigator({
 
 });
 
+export const NotificationsStack = StackNavigator({
+	Notifications:{
+		screen: Notifications,
+		navigationOptions: {
+			title: 'Notifications',
+		},
+	},
 
+	});
 
 export const HistoryStack = StackNavigator({
 	History:{
@@ -56,6 +65,15 @@ export const Tabs = TabNavigator({
 	    navigationOptions: {
 	    	tabBarLabel: 'Home',
 	    	tabBarIcon:({tintColor }) => <Icon name="home" size = {35} color={tintColor}/>
+	    	}
+	      
+	    },
+
+	Notifications: {
+	    screen: NotificationsStack,
+	    navigationOptions: {
+	    	tabBarLabel: 'Notifications',
+	    	tabBarIcon:({tintColor }) => <Icon name="notifications" size = {35} color={tintColor}/>
 	    	}
 	      
 	    },
