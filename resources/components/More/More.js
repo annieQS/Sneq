@@ -12,22 +12,42 @@ static navigationOptions = {
     <View style={{height: 400}}>
       <View style={styles.container}>
         <TouchableOpacity style={styles.list}>
-          <Icon name="account-circle" size = {35} color={'#1E90FF'} marginLeft={20}/>
+          <Icon 
+              name="account-circle" 
+              size = {35} 
+              color={'#4169E1'} 
+              marginLeft={20}/>
+
           <Text style={styles.item}>Account</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.list}>
-          <Icon name="help" size = {35} color={'#1E90FF'} marginLeft={20}/>
+          <Icon 
+            name="help" 
+            size = {35} 
+            color={'#4169E1'} 
+            marginLeft={20}/>
+
           <Text style={styles.item}>Help</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.list}>
-          <Icon name="feedback" size = {35} color={'#1E90FF'} marginLeft={20}/>
+          <Icon 
+            name="feedback" 
+            size = {35} 
+            color={'#4169E1'} 
+            marginLeft={20}/>
+
           <Text style={styles.item}>Feedback</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.list}>
-          <Icon name="info" size = {35} color={'#1E90FF'} marginLeft={20}/>
+          <Icon 
+            name="info" 
+            size = {35} 
+            color={"#4169E1"} 
+            marginLeft={20}/>
+
           <Text style={styles.item}>About</Text>
         </TouchableOpacity>
 
@@ -69,7 +89,7 @@ const styles = StyleSheet.create({
   },
 
   LogOutButtonContainer:{
-    backgroundColor: '#2980B9',
+    backgroundColor: '#4169E1',
     paddingVertical: 15,
     bottom: 20,
     marginLeft: 100,
@@ -82,6 +102,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color:'#E4F1FE'
   },
+
+
   
 });
 

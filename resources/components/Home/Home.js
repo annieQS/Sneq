@@ -70,7 +70,7 @@ class Home extends Component {
     </View>
 
     <View style={styles.part2}>
-      <Text style={styles.subHeader}>---Any Goodies in Your Mind?---</Text>
+      <Text style={styles.subHeader}>---Having Any Goodies in Your Mind?---</Text>
       
 
       <KeyboardAvoidingView behavior="padding" style={{height:200}}>
@@ -195,7 +195,7 @@ dropdown:{
   
 },
 submitButtonContainer:{
-    backgroundColor: '#2980B9',
+    backgroundColor: '#4169E1',
     paddingVertical: 15,
     bottom: 30,
     marginLeft: 100,

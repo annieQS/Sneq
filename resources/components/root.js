@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { TabNavigator, StackNavigator, StyleSheet} from 'react-navigation';
 import {Icon} from 'react-native-elements';
 
 
@@ -7,6 +7,8 @@ import Home from './Home/Home';
 import More from './More/More';
 import History from './History/History';
 import Notifications from './Notifications/Notifications';
+import Poll from './Poll/Poll';
+
 
 
 export const HomeStack = StackNavigator({
@@ -14,6 +16,9 @@ export const HomeStack = StackNavigator({
 		screen: Home,
 		navigationOptions: {
 			title: 'Sneq',
+			headerTitleStyle: {fontWeight: 'bold',fontSize: 20,color:'#E4F1FE'},
+			headerStyle: {backgroundColor: "#4169E1"},
+			headerTintColor: "white"
 		},
 	},
 
@@ -24,6 +29,9 @@ export const NotificationsStack = StackNavigator({
 		screen: Notifications,
 		navigationOptions: {
 			title: 'Notifications',
+			headerTitleStyle: {fontWeight: 'bold',fontSize: 20,color:'#E4F1FE'},
+			headerStyle: {backgroundColor: "#4169E1"},
+			headerTintColor: "white"
 		},
 	},
 
@@ -33,7 +41,11 @@ export const HistoryStack = StackNavigator({
 	History:{
 		screen: History,
 		navigationOptions: {
-			title: 'Menu History',
+			title: 'History',
+			headerTitleStyle: {fontWeight: 'bold',fontSize: 20,color:'#E4F1FE'},
+			headerStyle: {backgroundColor: "#4169E1"},
+			headerTintColor: "white"
+
 		},
 	},
 
@@ -44,6 +56,21 @@ export const MoreStack = StackNavigator({
 		screen: More,
 		navigationOptions: {
 			title: 'More',
+			headerTitleStyle: {fontWeight: 'bold',fontSize: 20,color:'#E4F1FE'},
+			headerStyle: {backgroundColor: "#4169E1"},
+			headerTintColor: "white"
+		},
+	},
+	});
+
+export const PollStack = StackNavigator({
+	More:{
+		screen: Poll,
+		navigationOptions: {
+			title: 'Poll',
+			headerTitleStyle: {fontWeight: 'bold',fontSize: 20,color:'#E4F1FE'},
+			headerStyle: {backgroundColor: "#4169E1"},
+			headerTintColor: "white"
 		},
 	},
 	});
@@ -58,7 +85,18 @@ export const Tabs = TabNavigator({
 	    	tabBarLabel: 'History',
 	    	tabBarIcon:({tintColor }) => <Icon name="history" size = {35} color={tintColor}/> 
 	    }
-	    
+	},
+	
+
+	Poll: {
+	    screen: PollStack,
+	    navigationOptions: {
+	    	tabBarLabel: 'Poll',
+	    	tabBarIcon:({tintColor }) => <Icon name="poll" size = {35} color={tintColor}/>
+	    	
+	      
+	    },
+    
 	  },
 	Home: {
 	    screen: HomeStack,
@@ -69,6 +107,7 @@ export const Tabs = TabNavigator({
 	      
 	    },
 
+	
 	Notifications: {
 	    screen: NotificationsStack,
 	    navigationOptions: {
@@ -78,7 +117,7 @@ export const Tabs = TabNavigator({
 	      
 	    },
 	  
-	  More: {
+	More: {
 	    screen: MoreStack,
 	    navigationOptions: {
 	    	tabBarLabel: 'More',
@@ -88,3 +127,5 @@ export const Tabs = TabNavigator({
 	  },
 
 });
+
+

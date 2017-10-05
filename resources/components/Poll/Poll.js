@@ -13,10 +13,9 @@ import {
   TabBarIOS
 } from 'react-native';
 import AnimatedBar from "react-native-animated-bar";
-import {Icon} from 'react-native-elements';
  
 
-class History extends Component {
+class Poll extends Component {
 
 
   state = {
@@ -28,7 +27,7 @@ class History extends Component {
       
       this.setState(state => {
         return {
-          progress: state.progress + 0.1,
+          progress: state.progress + 0.01,
         };
       });
     }, 1000);
@@ -36,7 +35,7 @@ class History extends Component {
 
 
   static navigationOptions = {
-    tabBarLabel: 'History'
+    tabBarLabel: 'Poll'
   }
 
   render() {
@@ -44,20 +43,13 @@ class History extends Component {
     return (
     <ScrollView style={styles.container}>
       <View style={styles.menu}>
-        <Text style={styles.date}>Thursday</Text>
-        <View style={styles.menuContainer}>
-            
-          <View style={styles.foodTypeContainer}>
-            <Text style={styles.foodTypeText}>Entree: </Text>
-            <Text style={styles.foodTypeText}>Pizza: </Text>
-            <Text style={styles.foodTypeText}>Soup: </Text>
-            <Text style={styles.foodTypeText}>Sandwich: </Text>
-            <Text style={styles.foodTypeText}>Special: </Text>
-          </View>
+        <Text style={styles.type}>Entree</Text>
+        
           <View style={styles.foodContainer}>
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.7} // manually make up the data
+                progress={this.state.progress+0.01}
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -70,12 +62,14 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.5}
+                progress={this.state.progress+0.03} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -88,11 +82,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+            <TouchableOpacity>
               <AnimatedBar
-                progress={0.4}
+                progress={this.state.progress+0.09} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -105,11 +101,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.9}
+                progress={this.state.progress+0.05} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -122,11 +120,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.15}
+                progress={this.state.progress+0.03} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -139,67 +139,23 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
 
-          </View> 
-          <View style={styles.likeBotton}>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-          </View>
+       
 
-        </View>
+      </View>
       </View>
 
       <View style={styles.menu}>
-        <Text style={styles.date}>Wednesday</Text>
-        <View style={styles.menuContainer}>
-            
-          <View style={styles.foodTypeContainer}>
-            <Text style={styles.foodTypeText}>Entree: </Text>
-            <Text style={styles.foodTypeText}>Pizza: </Text>
-            <Text style={styles.foodTypeText}>Soup: </Text>
-            <Text style={styles.foodTypeText}>Sandwich: </Text>
-            <Text style={styles.foodTypeText}>Special: </Text>
-          </View>
-
+        <Text style={styles.type}>Pizza</Text>
+        
           <View style={styles.foodContainer}>
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.3} // manually make up the data
+                progress={this.state.progress+0.01}
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -212,12 +168,14 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.9}
+                progress={this.state.progress+0.03} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -230,11 +188,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+            <TouchableOpacity>
               <AnimatedBar
-                progress={0.24}
+                progress={this.state.progress+0.09} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -247,11 +207,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.7}
+                progress={this.state.progress+0.05} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -264,11 +226,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.6}
+                progress={this.state.progress+0.03} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -281,70 +245,23 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
 
-          </View> 
+       
 
-          <View style={styles.likeBotton}>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-          </View>
-
-         
-
-        </View>
+      </View>
       </View>
 
       <View style={styles.menu}>
-        <Text style={styles.date}>Tuesday</Text>
-        <View style={styles.menuContainer}>
-            
-          <View style={styles.foodTypeContainer}>
-            <Text style={styles.foodTypeText}>Entree: </Text>
-            <Text style={styles.foodTypeText}>Pizza: </Text>
-            <Text style={styles.foodTypeText}>Soup: </Text>
-            <Text style={styles.foodTypeText}>Sandwich: </Text>
-            <Text style={styles.foodTypeText}>Special: </Text>
-          </View>
-
+        <Text style={styles.type}>Soup</Text>
+        
           <View style={styles.foodContainer}>
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.7} // manually make up the data
+                progress={this.state.progress+0.01}
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -357,12 +274,14 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.5}
+                progress={this.state.progress+0.03} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -375,11 +294,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+            <TouchableOpacity>
               <AnimatedBar
-                progress={0.4}
+                progress={this.state.progress+0.09} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -392,11 +313,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.9}
+                progress={this.state.progress+0.05} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -409,11 +332,13 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
-            <View style={{width:200}}>
+            <View style={styles.bar}>
+              <TouchableOpacity>
               <AnimatedBar
-                progress={0.15}
+                progress={this.state.progress+0.03} // make up data
                 height={30}
                 borderColor="#DDD"
                 barColor="#4169E1"
@@ -426,54 +351,16 @@ class History extends Component {
                   </Text>
                 </View>
               </AnimatedBar>
+              </TouchableOpacity>
             </View>
 
 
-          </View>
+       
 
-          <View style={styles.likeBotton}>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon 
-                name="star" 
-                size = {30} 
-                color={'gold'} 
-                marginLeft={10}/>
-            </TouchableOpacity>
-          </View>
-
-
-
-        </View>
+      </View>
       </View>
 
+      
       
     </ScrollView>
 
@@ -489,57 +376,33 @@ const styles = StyleSheet.create({
   
   menu:{
     
-    height: 220,
+
     backgroundColor:'white',
     margin: 10,
-    borderWidth: 0,
+  
     
 
     
   },
 
-date:{
-    top: 10,
+type:{
+    marginLeft: 10,
+    marginTop: 10,
     fontSize: 20,
-    height: 45,
-    textAlign: 'center',
+    height: 35,
+    textAlign: 'left',
+
     
 },
 
-  menuContainer:{
-    height: 170,
-    bottom: 5,
-    flexDirection: 'row',
-    marginLeft: 20,
-
-    
-  },
-  foodTypeContainer:{
-    justifyContent:'space-between',
-  
-
-  },
+ 
 
   foodContainer:{
     justifyContent:'space-between',
+    marginLeft:10,
+    marginRight:10,
+    marginBottom:10
     
-    
-    
-  },
-
-  foodTypeText:{
-    fontSize: 17,
-    textAlign: 'left',
-    
-    backgroundColor:'transparent'
-  },
-  foodText:{
-    fontSize: 15,
-    textAlign: 'left',
-    fontFamily: 'Chalkboard SE',
-    color: 'black',
-    backgroundColor:'transparent'
-
   },
 
   row: {
@@ -555,8 +418,11 @@ date:{
     backgroundColor: "transparent",
     color: "#FFF",
   },
-  likeBotton:{
-    justifyContent:'space-between'
+  bar:{
+    width: 250,
+    alignSelf: 'center',
+    marginTop: 8
+
   },
 
 });
@@ -564,4 +430,4 @@ date:{
 
 
 
-module.exports = History;
+module.exports = Poll;

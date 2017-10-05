@@ -13,6 +13,7 @@ import {
 
 } from 'react-native';
 
+import Try from './resources/components/Login/Try';
 
 import Login from './resources/components/Login/Login';
 import Signup from './resources/components/Signup/Signup';
